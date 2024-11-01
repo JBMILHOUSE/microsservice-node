@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:get": "tsx watch src/getService/index.ts"
+    "dev:get": "tsx watch src/getService/index.ts",
+    "dev:put": "tsx watch src/putService/index.ts"
   },
   "keywords": [],
   "author": "",

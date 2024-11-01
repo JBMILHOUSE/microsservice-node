@@ -6,7 +6,8 @@ import User from "./model/user";
 dotenv.config();
 const app = fastify();
 
-mongoose.connect('mongodb+srv://<cotuca>:<admincotuca>@cluster0.ijc0i.mongodb.net/cotuca?retryWrites=true&w=majority&appName=Cluster0') 
+// const mongoUrl = mongodb+srv://adminfrontend:adminfrontend@cluster0.ijc0i.mongodb.net/desafioFrontGanhadores?retryWrites=true&w=majority
+mongoose.connect('mongodb+srv://cotuca:admincotuca@cluster0.ijc0i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0') 
   .then(() => console.log('DELETE Service connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
