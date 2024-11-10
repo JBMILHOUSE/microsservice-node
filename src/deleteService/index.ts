@@ -7,16 +7,20 @@ dotenv.config();
 const app = fastify();
 
 mongoose.connect('mongodb+srv://cc23322:rzVtPb7OVBST15YN@microsservice-nodejs.qih6u.mongodb.net/?retryWrites=true&w=majority&appName=microsservice-nodejs') 
-  .then(() => console.log('GET Service connected to MongoDB'))
+  .then(() => console.log('DELETE Service connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
-
-app.get('/users',  async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
+interface IdParams {
+  id: string;
+}
+  
+app.delete('/:id',  async (request: FastifyRequest<{ Params: IdParams }>, reply: FastifyReply): Promise<void> => {
     try {
-      const user = await User.find();
+      const { id } = request.params;
 
-      if (user) {
-        reply.send(user);
+      const result = await User.findByIdAndDelete(id);
+      if (result) {
+        reply.status(204).send(); 
       } else {
         reply.status(404).send({ message: 'User não encontrado.' });
       }
@@ -25,4 +29,4 @@ app.get('/users',  async (request: FastifyRequest, reply: FastifyReply): Promise
     }
   });
 
-app.listen({ port: 3331 }).then(() => console.log('Get running na port: 3331'))
+app.listen({ port: 3334 }).then(() => console.log('Delete running na port: 3334'))

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:get": "tsx watch src/getService/index.ts"
+    "dev:get": "tsx watch src/getService/index.ts",
+    "dev:post": "tsx watch src/postService/index.ts",
+    "dev:put": "tsx watch src/putService/index.ts",
+    "dev:delete": "tsx watch src/deleteService/index.ts"
   },
   "keywords": [],
   "author": "",
