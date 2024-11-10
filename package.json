@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev:get": "tsx watch src/getService/index.ts",
+<<<<<<< HEAD
     "dev:post": "tsx watch src/postService/index.ts",
     "dev:put": "tsx watch src/putService/index.ts",
     "dev:delete": "tsx watch src/deleteService/index.ts"
+=======
+    "dev:put": "tsx watch src/putService/index.ts"
+>>>>>>> 933a28b8aec84c586526df7653582a2596c4992d
   },
   "keywords": [],
   "author": "",

@@ -16,9 +16,9 @@ Implementar um microsserviço em nodejs com autenticação básica, utilizando M
 
 #### Implementação de métodos CRUD
 - [x] Implementação método GET busca todos os usuários cadastrados.
-- [] Implementação método POST cadastro de novos usuários com senha criptografada.
-- [] Implementação método PUT atualização de senha do usuário.
-- [] Implementação método DELETE deletar usuário do banco.
+- [x] Implementação método POST cadastro de novos usuários com senha criptografada.
+- [x] Implementação método PUT atualização de senha do usuário.
+- [x] Implementação método DELETE deletar usuário do banco.
 
 #### Configuração do Docker
 - [] Configuração/ criação do docker.
