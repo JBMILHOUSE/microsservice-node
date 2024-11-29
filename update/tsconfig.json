@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "_version": "20.1.0",
+
+  "compilerOptions": {
+    // Define bibliotecas padrão modernas
+    "lib": ["es2023"],
+    // Define o sistema de módulos
+    "module": "node16",
+    // Define a versão alvo do JavaScript
+    "target": "es2022",
+
+    // Ativa verificações rigorosas
+    "strict": true,
+    // Permite interoperabilidade entre CommonJS e ESM
+    "esModuleInterop": true,
+    // Ignora checagem de bibliotecas para acelerar o build
+    "skipLibCheck": true,
+    // Resolve módulos usando as regras do Node.js moderno
+    "moduleResolution": "node16",
+
+    // Diretório de saída para arquivos compilados
+    "outDir": "./dist",
+    // Diretório raiz para o código fonte
+    "rootDir": "./src",
+
+    // Gera mapas de origem para facilitar debugging
+    "sourceMap": true
+  },
+  // Inclui todos os arquivos TypeScript no diretório src
+  "include": ["src/**/*.ts"]
+}

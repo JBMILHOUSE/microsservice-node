@@ -1,0 +1,45 @@
+version: "3.8"  # Define a versão do formato do Docker Compose. "3.8" é moderna e amplamente suportada.
+
+services:  # Define os serviços que o Docker Compose vai gerenciar.
+  create-service:  # Serviço responsável por criar dados no MongoDB.
+    build:
+      context: ./create  
+      dockerfile: Dockerfile # Diretório onde o Dockerfile e os arquivos do serviço estão localizados.
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development  # Mapeia a porta 3001 no host para a porta 3001 no container.
+    # env_file:
+    #   - .env  # Carrega as variáveis de ambiente do arquivo `.env`.
+
+  list-service:  # Serviço responsável por listar dados do MongoDB.
+    build: 
+      context: ./list  
+      dockerfile: Dockerfile  # Diretório para o serviço de listagem.
+    ports:
+      - "3002:3002"
+    # environment:
+    #   - NODE_ENV=development  # Mapeia a porta 3002 no host para a porta 3002 no container.
+  #   env_file:
+  #     - .env  # Usa o mesmo arquivo `.env` para configurar variáveis de ambiente.
+
+  update-service:  # Serviço responsável por atualizar dados no MongoDB.
+    build: 
+      context: ./update  
+      dockerfile: Dockerfile  # Diretório do serviço de atualização.
+    ports:
+      - "3003:3003"  # Mapeia a porta 3003 no host para a porta 3003 no container.
+  #   env_file:
+  #     - .env  # Reutiliza o mesmo arquivo `.env` para as configurações.
+
+  remove-service:  # Serviço responsável por remover dados do MongoDB.
+    build: 
+      context: ./remove  
+      dockerfile: Dockerfile  # Diretório do serviço de remoção.
+    ports:
+      - "3004:3004"  # Mapeia a porta 3004 no host para a porta 3004 no container.
+  #   env_file:
+  #     - .env  # Reutiliza o arquivo `.env` para configurações.
+
+# Como não há um serviço local de MongoDB, todos os microsserviços se conectam diretamente ao MongoDB Atlas.
+
