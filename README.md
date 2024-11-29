@@ -21,4 +21,4 @@ Implementar um microsserviço em nodejs com autenticação básica, utilizando M
 - [x] Implementação método DELETE deletar usuário do banco.
 
 #### Configuração do Docker
-- [] Configuração/ criação do docker.
+- [x] Configuração/ criação do docker.

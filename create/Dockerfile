@@ -19,8 +19,5 @@ RUN npm run build
 # Expõe a porta do serviço
 EXPOSE 3001
 
-# Define a variável de ambiente para produção
-# ENV NODE_ENV=production
-
 # Inicia o serviço com o código JavaScript compilado
-CMD ["npm", "start"]
+CMD ["node", "dist/index.js"]

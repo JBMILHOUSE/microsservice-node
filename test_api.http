@@ -1,5 +1,5 @@
 ### atualiza user por id
-PATCH  http://localhost:3003/users/6746351507db4179276e7fe8
+PUT http://localhost:3003/users/6746351507db4179276e7fe8
 Content-Type: application/json
 
 {
@@ -9,20 +9,20 @@ Content-Type: application/json
 
 
 ### lista usuarios
-
 GET http://localhost:3002/users
+
 
 ### criação de users
 POST http://localhost:3001/users
 Content-Type: application/json
 
 {
-  "username": "COTUCA_Aluno13",
-  "password": "aluno13cotuca"
+  "username": "COTUCA_Aluno16",
+  "password": "aluno16cotuca"
 }
 
 ### get test
 GET http://localhost:3001/
 
 ### Delete user por id
-DELETE http://localhost:3004/users/6746350a07db4179276e7fe4
+DELETE http://localhost:3004/users/67493bfd7f158bbdde0abe71

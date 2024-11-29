@@ -10,4 +10,4 @@ connectToMongoDB();
   
 app.put('/users/:id', updateById);
 
-app.listen({ port: 3003 }, () => console.log('PUT Service rodando na port: 3003'));
+app.listen({ port: 3003, host: "0.0.0.0" }, () => console.log('PUT Service rodando na port: 3003'));
